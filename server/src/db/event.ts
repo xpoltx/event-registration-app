@@ -12,7 +12,11 @@ const EventSchema = new mongoose.Schema({
 export const EventModel = mongoose.model('Event', EventSchema);
 
 export const getEvents = () => EventModel.find();
+export const getEventsSortedByTitle = () => EventModel.find().sort({title: -1});
+export const getEventsSortedByDate = () => EventModel.find().sort({evetDate: 1});
+export const getEventsSortedByOrganizer = () => EventModel.find().sort({organizer: -1});
 
-export const createEvent = (values: CreateEventDto) => new EventModel(values).save().then((user)=> user.toObject()).catch(err => console.log(err));
+
+export const createEvent = (values: CreateEventDto) => new EventModel(values).save().then((user)=> user.toObject());
 export const deleteEvent = (id: string) => EventModel.findByIdAndDelete({_id: id});
 export const updateEvent = (id: string, values: UpdateEventDto ) => EventModel.findByIdAndUpdate({ _id: id }, values, {new: true});
