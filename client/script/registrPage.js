@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify(registrationData),
             });
-           
+
             if (response.ok) {
                 alert('Event reg successful!');
                 history.back();

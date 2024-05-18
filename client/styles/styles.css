@@ -7,7 +7,7 @@ body {
     margin-left: 2rem;
 }
 
-.sort-container{
+.sort-container {
     margin: 2rem;
     text-align: right;
 }
@@ -164,7 +164,16 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-.error{
-    color:  red;
+.error {
+    color: red;
     font-size: 0.9rem;
+}
+
+.search-container{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hide {
+    display: none;
 }
