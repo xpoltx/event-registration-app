@@ -4,10 +4,10 @@ import { UpdateParticipantDto } from "../dtos/participants/UpdateParticipant.dto
 
 const ParticipantSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    email: {type: String, required: true, unique: true},
+    email: {type: String, required: true},
     dob: {type: String, required: true},
     heardAbout: {type: String, required: true},
-    eventId: {type: String, required: true}
+    eventId: {type: String, required: true, unique: true}
 });
 
 export const ParticipantModel = mongoose.model('Participant', ParticipantSchema);
