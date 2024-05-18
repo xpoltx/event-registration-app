@@ -14,9 +14,6 @@ export const ParticipantModel = mongoose.model('Participant', ParticipantSchema)
 
 export const getAllParticipants = () => ParticipantModel.find();
 export const getParticipantsByEvent = (eventId: string) => ParticipantModel.find({eventId : eventId});
-export const getParticipantByName = (eventId:string, name: string) => ParticipantModel.find({eventId, name});
-export const getParticipantByEmail = (eventId:string, email: string) => ParticipantModel.find({eventId, email});
-
 
 export const createParticipant = (values: CreateParticipantDto) => new ParticipantModel(values).save().then((participant) => participant.toObject());
 export const deleteParticipant = (id: string) => ParticipantModel.findByIdAndDelete({_id: id});

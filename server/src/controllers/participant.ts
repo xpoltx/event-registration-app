@@ -1,5 +1,5 @@
 import express from "express";
-import { createParticipant, deleteParticipant, getAllParticipants, getParticipantByEmail, getParticipantByName, getParticipantsByEvent, updateParticipant } from "../db/participant";
+import { createParticipant, deleteParticipant, getAllParticipants, getParticipantsByEvent, updateParticipant } from "../db/participant";
 import { UpdateParticipantDto } from "../dtos/participants/UpdateParticipant.dto";
 import { CreateParticipantDto } from "../dtos/participants/CreateParticipant.dto";
 
@@ -19,28 +19,6 @@ export const getEventParticipants = async(req: express.Request, res: express.Res
         const users = await getParticipantsByEvent(eventId);
 
         return res.status(200).json(users);
-    } catch (error) {
-        return res.status(500).json({error});
-    }
-}
-
-export const getByName = async(req: express.Request, res: express.Response)=>{
-    try {
-        const {eventId, name} = req.params;
-        const user = await getParticipantByName(eventId,name);
-
-        return res.status(200).json(user);
-    } catch (error) {
-        return res.status(500).json({error});
-    }
-}
-
-export const getByEmail = async(req: express.Request, res: express.Response)=>{
-    try {
-        const {eventId, email} = req.params;
-        const user = await getParticipantByEmail(eventId,email);
-
-        return res.status(200).json(user);
     } catch (error) {
         return res.status(500).json({error});
     }
