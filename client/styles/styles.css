@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.events-title {
+    font-weight: bold;
+    margin-left: 2rem;
+}
+
+.sort-container{
+    margin: 2rem;
+    text-align: right;
+}
+
+.event-container {
+    margin-left: 2rem;
+    overflow: auto;
+}
+
+.event {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 22rem;
+    margin-right: 20px;
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    height: 200px;
+}
+
+.event h3 {
+    margin-top: 0;
+}
+
+.event p {
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.register-button,
+.view-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin-right: 5px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+input[type="submit"],
+button {
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    color: white;
+    width: 100%;
+    font-size: 16px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+.participants-title {
+    font-weight: bold;
+    margin: 2rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.participant-container {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.participant {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 20rem;
+    box-sizing: border-box;
+    text-align: left;
+    float: left;
+    margin-left: 2rem;
+}
+
+.participant h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.participant p {
+    margin-bottom: 5px;
+}
+
+.participant p label {
+    font-weight: bold;
+}
+
+.error{
+    color:  red;
+    font-size: 0.9rem;
+}
