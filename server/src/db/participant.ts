@@ -7,7 +7,7 @@ const ParticipantSchema = new mongoose.Schema({
     email: {type: String, required: true},
     dob: {type: String, required: true},
     heardAbout: {type: String, required: true},
-    eventId: {type: String, required: true, unique: true}
+    eventId: {type: String, required: true}
 });
 
 export const ParticipantModel = mongoose.model('Participant', ParticipantSchema);
