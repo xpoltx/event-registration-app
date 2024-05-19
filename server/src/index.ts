@@ -30,21 +30,3 @@ mongoose.connection.on('error', (error: Error) => console.log(error));
 app.listen(process.env.PORT, ()=>{
     console.log("server running");
 });
-
-// your-project/
-// ├── client/
-// │   └── pages/
-// │       └── index.html
-// │       └── participanyPage.html
-// │       └── registration.html
-// │   └── styles
-// │       └──style.css
-// │   └── scripts
-// │       └──mainPage.js
-// │       └──participanyPage.js
-// │       └──retistr.js
-// ├── server/
-// │   └──src
-// │       └── index.ts
-// │   └──package.json
-// │   └──.env
