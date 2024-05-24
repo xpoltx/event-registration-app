@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchEvents = async (sortBy = '') => {
         try {
-            let url = 'http://localhost:3000/events';
+            let url = 'https://event-registration-app-back.onrender.com/events';
             if (sortBy) {
                 if (sortBy === 'title') {
-                    url = 'http://localhost:3000/events/title';
+                    url = 'https://event-registration-app-back.onrender.com/events/title';
                 } else if (sortBy === 'eventDate') {
-                    url = 'http://localhost:3000/events/date';
+                    url = 'https://event-registration-app-back.onrender.com/events/date';
                 } else if (sortBy === 'organizer') {
-                    url = 'http://localhost:3000/events/org';
+                    url = 'https://event-registration-app-back.onrender.com/events/org';
                 }
             }
             const response = await fetch(url);

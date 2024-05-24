@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         registrationData.eventId = urlParams.get('eventId');;
 
         try {
-            const response = await fetch('http://localhost:3000/event/participant', {
+            const response = await fetch('https://event-registration-app-back.onrender.com/event/participant', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

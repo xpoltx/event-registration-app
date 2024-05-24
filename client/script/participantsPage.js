@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchParticipants = async () => {
         try {
-            let url = `http://localhost:3000/event/${eventId}/participants`;
+            let url = `https://event-registration-app-back.onrender.com/event/${eventId}/participants`;
             const response = await fetch(url);
             const participants = await response.json();
             displayParticipants(participants);
